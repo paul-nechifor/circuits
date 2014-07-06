@@ -2,6 +2,8 @@
 
 Generate seamless circuit board tiles. Uses my [circuit-boards][cb] package.
 
+![circuits screenshot](screenshot.png)
+
 ## Usage
 
 Install the dependencies:
