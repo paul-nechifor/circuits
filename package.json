@@ -7,8 +7,8 @@
     "start": "node build/app.js"
   },
   "dependencies": {
-    "intercessor": ">=0.2.3",
-    "circuit-boards": "0.0.1"
+    "intercessor": ">=0.3.2",
+    "circuit-boards": "0.1.0"
   },
   "repository": {
     "type": "git",

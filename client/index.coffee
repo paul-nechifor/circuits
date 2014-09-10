@@ -7,6 +7,7 @@ main = ->
 class Page
   constructor: ->
     @regenerateBtn = $ '#regenerate'
+    @randomBtn = $ '#random'
     @setAsBackgroundBtn = $ '#set-as-background'
     @values = $ '#values'
     @canvas = document.getElementById 'tile'
@@ -15,6 +16,7 @@ class Page
 
   setup: ->
     @regenerateBtn.click => @onRegenerateClick()
+    @randomBtn.click => @onRandomClick()
     @setAsBackgroundBtn.click => @onSetAsBackgroundClick()
     @generateNewBoard()
 
@@ -23,6 +25,13 @@ class Page
       @stopDraw => @generateNewBoard()
     else
       @generateNewBoard()
+    return
+
+  onRandomClick: ->
+    styles = Object.keys circuits.styles
+    style = styles[Math.floor Math.random() * styles.length]
+    @values.val JSON.stringify {style: style}, null, 4
+    @onRegenerateClick()
 
   onSetAsBackgroundClick: ->
     @isBackgroundSet = not @isBackgroundSet
