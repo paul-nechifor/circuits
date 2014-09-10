@@ -1,6 +1,7 @@
 # Circuits
 
-Generate seamless circuit board tiles. Uses my [circuit-boards][cb] package.
+Generate seamless circuit board tiles. Uses my [circuit-boards][cb] package. You
+can [play with the settings][site] on my web site.
 
 ![circuits screenshot](screenshot.png)
 
@@ -25,3 +26,4 @@ See it at [localhost:3000](http://localhost:3000).
 MIT
 
 [cb]: https://github.com/paul-nechifor/circuit-boards
+[site]: http://nechifor.net/circuits
