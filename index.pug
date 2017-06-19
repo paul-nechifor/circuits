@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    style: :stylus(compress=true)
+      max-width = 600px
+      body
+        font-size 1.2em
+        line-height 1.4
+      .header, .footer
+        margin 0 auto
+        max-width max-width
+      a
+        text-decoration none
+        &:hover
+          text-decoration underline
+
+      #tile
+        display block
+        margin 0 auto
+
+      #values
+        display block
+        max-width max-width
+        margin-left auto
+        margin-right auto
+        font-family monospace
+        font-size 14px
+        width 100%
+
+      form
+        text-align center
+
+      .separated-block
+        line-height 1
+        font-size 0
+        padding 10px 0
+
+      body.circuit
+        &, h1 a
+          color #fff
+        textarea
+          background none
+          border 1px solid #fff
+
+  body: .header: :markdown-it
+
+    # [Circuits](.)
+
+    I created this circuit seamless-tile-generator because I’m going to need it
+    in TorusCycle (early stage game). But you can play with it here. If you want
+    to edit it, go ahead and [fork it on GitHub][circuits-gh].
+
+    [circuits-gh]: https://github.com/paul-nechifor/circuits
+
+  .separated-block-top
+    canvas#tile
+
+  .readable
+    form
+      .separated-block
+        button#regenerate.btn.btn-info(type='button') Regenerate
+        = ' '
+        button#random.btn(type='button') Random
+        = ' '
+        button#set-as-background.btn(data-toggle='button', type='button') Set as background
+    textarea#values(rows='13').
+      {
+          "size": 64,
+          "abandonPartitionSize": 80,
+          "cellSize": 8,
+          "backgroundColor": "#112211",
+          "circuitPrimaryColor": "#116611",
+          "circuitSecondaryColor": "#666611",
+          "squareRelativeSize": 0.7,
+          "circuitPrimaryLineWidth": 0.26,
+          "fontColor": "#666611",
+          "fontFamily": "monospace",
+          "fontRelativeSize": 1.2
+      }
+
+  .footer: :markdown-it
+    Created by [Paul Nechifor](/).
+
+  script !{js}
