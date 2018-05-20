@@ -4,8 +4,10 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     title Circuits
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='description', content='Generator of seamless tiles that resemble circuit boards.')
     link(rel='apple-touch-icon', href='/favicon152.png')
+
     style: :stylus(compress=true)
       max-width = 600px
 
@@ -16,6 +18,13 @@ html(lang='en')
       .header, .footer
         margin 0 auto
         max-width max-width
+
+      .footer
+        padding-top 1em
+        small
+          color #999
+          a
+            color #888
 
       a
         text-decoration none
@@ -62,10 +71,7 @@ html(lang='en')
       # [Circuits](.)
 
       I created this circuit seamless-tile-generator because I’m going to need
-      it in TorusCycle (early stage game). But you can play with it here. If you
-      want to edit it, go ahead and [fork it on GitHub][circuits-gh].
-
-      [circuits-gh]: https://github.com/paul-nechifor/circuits
+      it in TorusCycle (early stage game). But you can play with it here.
 
     .separated-block-top
       canvas#tile
@@ -93,7 +99,14 @@ html(lang='en')
             "fontRelativeSize": 1.2
         }
 
-    .footer: :markdown-it
-      Created by [Paul Nechifor](/).
+    .footer
+      :markdown-it
+        Created by [Paul Nechifor](/). [View the Git source.](https://github.com/paul-nechifor/circuits)
+
+      small: :markdown-it
+        [Home](/) •
+        [Blog](/blog) •
+        [Projects](/projects) •
+        [Twitter](https://twitter.com/PaulNechifor)
 
     script !{js}
