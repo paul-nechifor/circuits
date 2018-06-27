@@ -1,3 +1,7 @@
+# This repository has been moved to [gitlab.com/paul-nechifor/circuits](http://gitlab.com/paul-nechifor/circuits).
+
+Old readme:
+
 # Circuits
 
 Generate seamless circuit board tiles. Uses my [circuit-boards][cb] package. You
